@@ -1,0 +1,59 @@
+[package]
+name = "thunderfuel-super-node"
+version = "0.1.0"
+edition = "2021"
+description = "ThunderFuel Network Super Node Implementation"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+tokio-util = "0.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.0", features = ["v4"] }
+clap = { version = "4.0", features = ["derive"] }
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+bytes = "1.0"
+futures = "0.3"
+async-trait = "0.1"
+
+# P2P networking
+libp2p = { version = "0.53", features = [
+    "tcp", "udp", "quic", "noise", "yamux", "identify", 
+    "ping", "mdns", "kad", "gossipsub", "autonat"
+] }
+
+# QUIC transport
+quinn = "0.10"
+rustls = "0.21"
+rcgen = "0.11"
+
+# Blockchain integration
+solana-client = "1.16"
+solana-sdk = "1.16"
+anchor-client = "0.28"
+
+# BitTorrent protocol
+torrent-rs = "0.2"
+
+# HTTP server
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Metrics and monitoring
+prometheus = "0.13"
+metrics = "0.21"
+metrics-prometheus = "0.6"
+
+# Configuration
+config = "0.13"
+once_cell = "1.19"
+
+[dev-dependencies]
+tempfile = "3.0"

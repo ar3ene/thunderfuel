@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ant-layout {
+  background: #f0f2f5;
+}
+
+.ant-layout-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.ant-layout-sider {
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+}
+
+.ant-layout-content {
+  margin-left: 250px;
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: relative;
+    margin-top: 0;
+    height: auto;
+  }
+  
+  .ant-layout-content {
+    margin-left: 0;
+  }
+}
+
+/* 钱包按钮样式 */
+.wallet-adapter-button {
+  background: linear-gradient(45deg, #722ed1, #1890ff) !important;
+  border: none !important;
+  border-radius: 6px !important;
+}
+
+.wallet-adapter-button:hover {
+  background: linear-gradient(45deg, #531dab, #096dd9) !important;
+}
+
+/* 加速按钮动画 */
+.speed-boost-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+/* 进度条自定义颜色 */
+.ant-progress-bg {
+  background: linear-gradient(90deg, #1890ff, #722ed1);
+}
+
+/* 卡片悬停效果 */
+.ant-card {
+  transition: all 0.3s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
