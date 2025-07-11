@@ -1,10 +1,10 @@
-# ThunderFuel Network - 技术架构设计
+# ThunderFuel Network - Architecture
 
-## 项目结构
+## Project Architecture
 
 ```
 thunderfuel/
-├── README.md                 # 项目说明
+├── README.md                # 项目说明
 ├── whitepaper.md            # 白皮书
 ├── docs/                    # 文档目录
 │   ├── api/                 # API文档
@@ -25,7 +25,7 @@ thunderfuel/
 ├── protocol/                # 网络协议
 │   ├── quic-transport/      # QUIC传输层
 │   ├── incentive-layer/     # 激励协议
-│   └── p2p-core/           # P2P核心
+│   └── p2p-core/            # P2P核心
 ├── backend/                 # 后端服务
 │   ├── api-server/          # API服务器
 │   ├── indexer/             # 区块链索引
@@ -36,17 +36,17 @@ thunderfuel/
     └── deployment/          # 部署工具
 ```
 
-## 核心技术栈
+## Core Stacks
 
-- **区块链**: Solana (Rust)
-- **客户端**: React + TypeScript + WebAssembly
-- **节点**: Rust + libp2p + QUIC
-- **智能合约**: Anchor Framework (Solana)
-- **数据库**: PostgreSQL + Redis
-- **监控**: Prometheus + Grafana
-- **部署**: Docker + Kubernetes
+- **Block Chain**: Solana (Rust)
+- **Client**: React + TypeScript + WebAssembly
+- **Node**: Rust + libp2p + QUIC
+- **Smart Contract**: Anchor Framework (Solana)
+- **Database**: PostgreSQL + Redis
+- **Dashboard**: Prometheus + Grafana
+- **Deployment**: Docker + Kubernetes
 
-## 开发环境要求
+## Dev Environment
 
 - Node.js 18+
 - Rust 1.70+
@@ -54,11 +54,11 @@ thunderfuel/
 - Docker 20+
 - Git
 
-## 快速开始
+## Quick Start
 
-1. 克隆仓库
-2. 安装依赖
-3. 启动开发环境
-4. 运行测试
+1. Clone the Repo.
+2. npm install dependencies.
+3. npm start
+4. test
 
-详细步骤见各组件的 README 文件。
+Please referto the README files.
